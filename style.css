@@ -1,14 +1,30 @@
 #navbarSupportedContent{
     justify-content: center;
-    margin: 10px;
+    margin: 25px;
 }
 #container{
+    margin-top: 30px;
+    margin-left: 100px;
+    margin-right: 100px;
     display: grid;
     grid-template-columns: repeat(4,1fr);
+   grid-column-gap: 15px;
+   grid-row-gap: 25px;
    
-    /* display: flex; */
+    
 }
-div{
-    margin: 5px;
+div h4{
+    margin-top: 20px;
+    text-align: center;
+   
+}
+div img{
+    border-radius: 20px 20px 0  0;
+    width: 100%;
+}
+#container div{
+    border-radius: 20px;
+    background-color: lightgray;
+    height: 300px;
    
 }
