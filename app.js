@@ -11,6 +11,9 @@ function findItem() {
 
 function display_items(search_input) {
     if (search_input == '') {
+        const description = document.getElementById('description');
+                description.innerHTML =
+                    `<h1 style="text-align: center;">What are you looking for ? </h1>`
         return;
     }
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search_input}`)
@@ -45,8 +48,6 @@ function showDetail(meal_id) {
         .then(data => {
             document.getElementById('description').innerHTML = '';
             const meals = data.meals[0];
-            console.log(meal_id);
-            console.log(meals);
             const pic_link = meals.strMealThumb;
             const name = meals.strMeal;
             const description_section = document.getElementById('description');
