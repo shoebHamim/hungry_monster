@@ -1,21 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>test</title>
 </head>
+
 <body>
     <script>
-        fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=qw`)
-        .then(res => res.json())
-        .then(data => {
-            const meals = data.meals;
-            if(meals==null){
-                console.log('paici');
-            }
-        })
+        fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=52795`)
+            .then(res => res.json())
+            .then(data => {
+                const meal = data.meals[0];
+                // console.log(meal);
+                // // how do you distinguish between variable and string???
+                // console.log(`${meal[`strIngredient1${i}`]}`);
+                // console.log(meal.strIngredient1);
+
+                for (let i = 1; `${meal[`strIngredient${i}`]}`; i++) {
+                    const ingredient = document.createElement('p');
+                    ingredient.innerHTML = `${meal[`strMeasure${i}`]} ${meal[`strIngredient${i}`]}`;
+                    const test_output = `✅ ${meal[`strMeasure${i}`]} ${meal[`strIngredient${i}`]}`;
+                    console.log(test_output);
+                    
+                }
+
+            });
     </script>
 </body>
+
 </html>

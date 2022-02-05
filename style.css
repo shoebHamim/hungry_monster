@@ -1,5 +1,6 @@
 #navbarSupportedContent{
     justify-content: center;
+    
     margin: 25px;
 }
 #container{
@@ -13,18 +14,44 @@
    
     
 }
-div h4{
+#container div h4{
     margin-top: 20px;
     text-align: center;
    
 }
-div img{
+#container div img{
     border-radius: 20px 20px 0  0;
     width: 100%;
 }
+#single_item_img{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;  
+}
+#description img{
+    border-radius: 10px;
+}
+
+
 #container div{
     border-radius: 20px;
     background-color: lightgray;
     height: 300px;
    
+}
+#container div:hover{
+    cursor: pointer;
+    color: blue;
+}
+#single_item_description {
+    margin-top: 35px;
+    margin-left: 466px;
+}
+#single_item_description h4{
+    margin-top: 30px;
+}
+#single_item_procedure{
+    margin-top: 30px;
+    margin-left: 466px;
+    margin-bottom: 60px;
 }
