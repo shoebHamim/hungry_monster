@@ -63,6 +63,8 @@ function showDetail(meal_id) {
             for (let i = 1; `${meals[`strMeasure${i}`]}`; i++) {
                 if (`${meals[`strMeasure${i}`]}` == 'undefined') {
                     break;
+                }if (!`${meals[`strIngredient${i}`]}`) {
+                    break;
                 }
                 const ingredient = document.createElement('p');
                 ingredient.innerHTML = `✅ ${meals[`strMeasure${i}`]} ${meals[`strIngredient${i}`]}`;
